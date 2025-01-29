@@ -6,9 +6,20 @@ import DashboardScreen from '../../modules/dashboard/DashboardScreen';
 import ScannerScreen from '../../modules/scanner/ScannerScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ProductInfo from '../../modules/product/ProductInfo';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
+function ScannerStackScreen() {
+    return (
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Scanner" component={ScannerScreen} />
+            <Stack.Screen name="Product" component={ProductInfo} />
+        </Stack.Navigator>
+    );
+}
 function AppNavigation() {
 
     return (
@@ -27,7 +38,7 @@ function AppNavigation() {
                         }
                     })}
                 >
-                    <Tab.Screen name="Scan" component={ScannerScreen} />
+                    <Tab.Screen name="Scan" component={ScannerStackScreen} />
                     <Tab.Screen name="Home" component={DashboardScreen} />
                     <Tab.Screen name="History" component={DashboardScreen} />
                     <Tab.Screen name="Profile" component={DashboardScreen} />

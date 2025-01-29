@@ -4,11 +4,15 @@ import { Button, useTheme, Icon } from "@rneui/themed";
 import { LinearGradient } from "expo-linear-gradient";
 import * as ImagePicker from 'expo-image-picker';
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import { useDispatch } from "react-redux";
+import { setUserDetails } from "../../core/redux/slices/userSlice";
 
 const ScannerScreen = () => {
   const { theme } = useTheme();
   const [isPersonalized, setIsPersonalized] = useState(false);
-  const [image, setImage] = useState(null);
+  const {navigate} = useNavigation();
+  const dispatch = useDispatch()
 
   const captureImage = async () => {
     // Request camera permission
@@ -20,13 +24,14 @@ const ScannerScreen = () => {
 
     // Open camera
     const result = await ImagePicker.launchCameraAsync({
-      allowsEditing: true,
-      aspect: [4, 3],
+      // allowsEditing: true,
+      // aspect: [4, 3],
       quality: 1,
     });
 
     if (!result.canceled) {
-      setImage(result.assets[0].uri);
+      dispatch(setUserDetails({image: result.assets[0].uri}));
+      navigate('Product', {image: result.assets[0].uri});
     }
   };
 
