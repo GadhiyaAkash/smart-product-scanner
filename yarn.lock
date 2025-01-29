@@ -2813,7 +2813,7 @@ expo-image-loader@~5.0.0:
   resolved "https://registry.yarnpkg.com/expo-image-loader/-/expo-image-loader-5.0.0.tgz#4f58a21ab26e40d6fccc211b664fd9fe21a5dcb8"
   integrity sha512-Eg+5FHtyzv3Jjw9dHwu2pWy4xjf8fu3V0Asyy42kO+t/FbvW/vjUixpTjPtgKQLQh+2/9Nk4JjFDV6FwCnF2ZA==
 
-expo-image-picker@~16.0.4:
+expo-image-picker@^16.0.4:
   version "16.0.4"
   resolved "https://registry.yarnpkg.com/expo-image-picker/-/expo-image-picker-16.0.4.tgz#f4f1e8cf5453c08c2622aafe3f139b846b261d7e"
   integrity sha512-LeTdQxL+kS8wiFOf+mTxDZmr0Ok3KwcpvCaDnXwCdCQuszVd4sSml7lg+oaJfkWj793u74M+8j0hQaEDHCgkxg==
@@ -2824,6 +2824,11 @@ expo-keep-awake@~14.0.2:
   version "14.0.2"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-14.0.2.tgz#124a729df43c87994631f51d5b1b5093d58e6c80"
   integrity sha512-71XAMnoWjKZrN8J7Q3+u0l9Ytp4OfhNAYz8BCWF1/9aFUw09J3I7Z5DuI3MUsVMa/KWi+XhG+eDUFP8cVA19Uw==
+
+expo-linear-gradient@^14.0.2:
+  version "14.0.2"
+  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-14.0.2.tgz#51fb266d1c7a38349077d243e383cc3d69d4356b"
+  integrity sha512-nvac1sPUfFFJ4mY25UkvubpUV/olrBH+uQw5k+beqSvQaVQiUfFtYzfRr+6HhYBNb4AEsOtpsCRkpDww3M2iGQ==
 
 expo-modules-autolinking@2.0.7:
   version "2.0.7"
